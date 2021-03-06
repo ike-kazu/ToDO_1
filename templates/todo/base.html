@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <title>TODO</title>
+        <link rel="stylesheet" href="{% static 'todo_app/ress.css' %}">
+        <link rel="stylesheet" href="{% static 'todo_app/style.css' %}">
+    </head>
+    <body>
+    <div class="header">
+        <h2><a href="{% url 'todo:index' %}">ToDo App</a></h2>
+        <ul>
+                <li><a href="{% url 'todo:category_list' %}">カテゴリーから探す</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'todo:create_category_input' %}">カテゴリーを作成</a></li>
+                <li><a href="{% url 'todo:create_todo_input' %}">ToDoを作成</a></li>
+                <li><a href="{% url 'todo:logout' %}">ログアウト</a></li>
+                {% else %}
+                <li><a href="{% url 'todo:login' %}">ログイン</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "todo/base.html" %}
+{% block content %}
+    {% for field in category_form %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+        {{ field.value }}
+    </div>
+    {% endfor %}
+
+    <a href="{% url 'todo:create_category_input' %}" class="btn btn-primary btn-lg">戻る</a>
+    <hr>
+    <form action="{% url 'todo:create_category_save' %}" method="POST">
+        <button type="submit" class="btn btn-primary btn-lg">送信</button>
+        {% csrf_token %}
+    </form>
+{% endblock %}

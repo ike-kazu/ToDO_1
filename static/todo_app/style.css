@@ -1,0 +1,91 @@
+/*Whole*/
+li{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.header,
+.main{
+
+}
+
+
+/*header*/
+.header{
+    height: 100px;
+    background: gray;
+    display: flex;
+    vertical-align: middle;
+}
+
+.header h2{
+    margin: auto auto auto 5%;
+}
+
+.header ul{
+    display: flex;
+    margin: auto 5% auto auto;
+}
+
+.header ul li{
+    padding: 0 8px;
+    border-right: solid 1px black;
+    font-weight: bold;
+}
+
+.header ul li:last-child{
+    border-right: none;
+}
+
+/*main*/
+
+.main{
+    margin: 20px 5%;
+}
+
+.main h2{
+    margin-bottom: 50px;
+}
+
+.main ul{
+    padding: 20px 0;
+    border-top: solid 1px black;
+    margin: 0;
+    display: flex;
+}
+
+.main ul:last-child{
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.main .category_list{
+    width: 100%;
+    margin:0 auto;
+    border-top: solid 1px black;
+}
+
+.main .category_list:last-child{
+    width: 100%;
+    margin:0 auto;
+    border-bottom: solid 1px black;
+}
+
+.main .category_list li{
+    margin: 0 auto;
+}
+
+/*ToDo*/
+
+.main ul li.todo_title{
+    padding: 0 0 0 5%;
+}
+
+.main ul li.todo_created_at{
+    margin-left: auto;
+    padding: 0 5% 0 0;
+}

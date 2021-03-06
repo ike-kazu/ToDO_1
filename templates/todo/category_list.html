@@ -1,0 +1,11 @@
+{% extends "todo/base.html" %}
+{% block content %}
+    <div class="category_list_wrap">
+    {% for category in category_list %}
+        <ul class="category_list">
+                <li><a href="{% url 'todo:todo_list' pk=category.pk %}">{{ category.title }}></a></li>
+        </ul>
+    {% endfor %}
+    </div>
+{% endblock %}
+

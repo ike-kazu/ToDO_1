@@ -1,0 +1,15 @@
+{% extends "todo/base.html" %}
+{% block content %}
+    <div>
+    {% if todos %}
+    {% for todo in todos %}
+        <ul class="todo_list">
+            <li class="todo_title">{{ todo.title }}</li>
+            <li class="todo_created_at">{{ todo.created_at }}</li>
+        </ul>
+    {% endfor %}
+        {% else %}
+        <h2>現在、このカテゴリーのToDoは存在しません</h2>
+    {% endif %}
+    </div>
+{% endblock %}
